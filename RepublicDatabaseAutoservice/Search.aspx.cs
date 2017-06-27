@@ -72,5 +72,23 @@ namespace RepublicDatabaseAutoservice
 
             PlaceHolder1.Controls.Add(new Literal { Text = html.ToString() });
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CallStoredProcedure.spGetStoByBrandAndModel(TextBox5.Text, TextBox6.Text);
+            GenerateHTML(dt);
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CallStoredProcedure.spGetStoByBrand(TextBox7.Text);
+            GenerateHTML(dt);
+        }
+
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CallStoredProcedure.spGetStoByAgeAuto(TextBox8.Text);
+            GenerateHTML(dt);
+        }
     }
 }

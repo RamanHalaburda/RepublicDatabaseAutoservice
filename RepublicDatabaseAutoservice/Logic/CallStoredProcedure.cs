@@ -58,5 +58,23 @@ namespace RepublicDatabaseAutoservice.Logic
             string query = String.Concat("EXEC GetSTOByCategory '", _param, "'");
             return CallSP(query);
         }
+
+        public static DataTable spGetStoByBrandAndModel(string _param1, string _param2)
+        {
+            string query = String.Concat("EXEC GetSTOByBrandAndModel '", _param1, "','", _param2, "'");
+            return CallSP(query);
+        }
+
+        public static DataTable spGetStoByBrand(string _param)
+        {
+            string query = String.Concat("EXEC GetSTOByBrand '", _param, "'");
+            return CallSP(query);
+        }
+
+        public static DataTable spGetStoByAgeAuto(string _param)
+        {
+            string query = String.Concat("EXEC GetSTOByAgeAuto ", _param);
+            return CallSP(query);
+        }
     }
 }
