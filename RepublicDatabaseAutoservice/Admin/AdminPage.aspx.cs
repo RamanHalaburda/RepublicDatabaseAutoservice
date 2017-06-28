@@ -12,7 +12,7 @@ namespace RepublicDatabaseAutoservice.Admin
     public partial class AdminPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {/*
             string productAction = Request.QueryString["ProductAction"];
             if (productAction == "add")
             {
@@ -22,11 +22,11 @@ namespace RepublicDatabaseAutoservice.Admin
             if (productAction == "remove")
             {
                 LabelRemoveStatus.Text = "Product removed!";
-            }
+            }*/
         }
 
         protected void AddProductButton_Click(object sender, EventArgs e)
-        {
+        {/*
             Boolean fileOK = false;
             String path = Server.MapPath("~/Catalog/Images/");
             if (ProductImage.HasFile)
@@ -74,9 +74,9 @@ namespace RepublicDatabaseAutoservice.Admin
             else
             {
                 LabelAddStatus.Text = "Unable to accept file type.";
-            }
+            }*/
         }
-
+        /*
         public IQueryable GetCategories()
         {
             var _db = new RepublicDatabaseAutoservice.Models.ProductContext();
@@ -111,6 +111,6 @@ namespace RepublicDatabaseAutoservice.Admin
                     LabelRemoveStatus.Text = "Unable to locate product.";
                 }
             }
-        }
+        }*/
     }
 }

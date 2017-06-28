@@ -13,9 +13,11 @@ namespace RepublicDatabaseAutoservice
 {
     public partial class Search : System.Web.UI.Page
     {
+        private string selectedBrand { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            FillFields.LoadBrands(DropDownList1);
         }        
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -81,13 +83,28 @@ namespace RepublicDatabaseAutoservice
 
         protected void Button6_Click(object sender, EventArgs e)
         {
-            DataTable dt = CallStoredProcedure.spGetStoByBrand(TextBox7.Text);
-            GenerateHTML(dt);
+            //PopulateDropDownList();
+            string value = DropDownList1.SelectedItem.Text;
+                DataTable dt = CallStoredProcedure.spGetStoByBrand(value);
+                string st = selectedBrand + "_ss";
+                //DataTable dt = CallStoredProcedure.spGetStoByBrand(/*DropDownList1*/TextBox7.Text);
+                GenerateHTML(dt);
+        }
+
+        protected void ddl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedBrand = DropDownList1.Items[System.Convert.ToInt32(DropDownList1.SelectedValue)].Text;
         }
 
         protected void Button7_Click(object sender, EventArgs e)
         {
             DataTable dt = CallStoredProcedure.spGetStoByAgeAuto(TextBox8.Text);
+            GenerateHTML(dt);
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CallStoredProcedure.spGetStoByAgeAndMakerCountry(TextBox9.Text, TextBox10.Text);
             GenerateHTML(dt);
         }
     }

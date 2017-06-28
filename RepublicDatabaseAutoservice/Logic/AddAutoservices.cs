@@ -16,13 +16,13 @@ namespace RepublicDatabaseAutoservice.Logic
             myService.serviceName = serviceName;
             myService.serviceAddress = serviceAddress;
             myService.serviceLocation = serviceLocation;
-
+            /*
             using (ProductContext _db = new ProductContext())
             {
                 // Add service to DB.
                 _db.Products.Add(myService);
                 _db.SaveChanges();
-            }
+            }*/
             // Success.
             return true;
         }

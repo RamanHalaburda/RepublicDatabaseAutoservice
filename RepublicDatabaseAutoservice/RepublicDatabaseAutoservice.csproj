@@ -173,7 +173,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="Admin\Web.config" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -367,6 +369,7 @@
     </Compile>
     <Compile Include="Logic\AddAutoservices.cs" />
     <Compile Include="Logic\CallStoredProcedure.cs" />
+    <Compile Include="Logic\FillFields.cs" />
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Models.cs" />

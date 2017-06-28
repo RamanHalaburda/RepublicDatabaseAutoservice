@@ -10,7 +10,7 @@ namespace RepublicDatabaseAutoservice.Logic
     internal class RoleActions
     {
         internal void AddUserAndRole()
-        {
+        {/*
             // Access the application context and create result variables.
             Models.ApplicationDbContext context = new ApplicationDbContext();
             IdentityResult IdRoleResult;
@@ -47,7 +47,7 @@ namespace RepublicDatabaseAutoservice.Logic
             if (!userMgr.IsInRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit"))
             {
                 IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit");
-            }
+            }*/
         }
     }
 }

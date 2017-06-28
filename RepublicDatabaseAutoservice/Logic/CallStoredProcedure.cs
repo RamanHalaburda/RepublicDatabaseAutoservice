@@ -76,5 +76,11 @@ namespace RepublicDatabaseAutoservice.Logic
             string query = String.Concat("EXEC GetSTOByAgeAuto ", _param);
             return CallSP(query);
         }
+
+        public static DataTable spGetStoByAgeAndMakerCountry(string _param1, string _param2)
+        {
+            string query = String.Concat("EXEC GetSTOByAgeAndMakerCountry ", _param1, ",'", _param2, "'");
+            return CallSP(query);
+        }
     }
 }
